@@ -73,7 +73,7 @@ class ProductDetector:
             os.path.dirname(os.path.abspath(__file__)),
             "..",
             "yolo_model",
-            "best.pt",
+            "best_complete.pt",
         )
         self.model = ultralytics.YOLO(weight_path)
         self.pub = rospy.Publisher("/detection_results", Detection, queue_size=10)
